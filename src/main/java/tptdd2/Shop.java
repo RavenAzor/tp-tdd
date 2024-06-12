@@ -12,6 +12,8 @@ public class Shop {
     }
 
     public void update(Product product) throws ExecutionControl.NotImplementedException{
-        throw new ExecutionControl.NotImplementedException("");
+        if (product.getQuality() == 0) {
+            product.setQuality(product.getQuality() / 2);
+        }
     }
 }

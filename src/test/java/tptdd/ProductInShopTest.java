@@ -1,5 +1,6 @@
 package tptdd;
 
+import jdk.jshell.spi.ExecutionControl;
 import org.junit.jupiter.api.Test;
 import tptdd2.Product;
 import tptdd2.Shop;
@@ -11,7 +12,7 @@ public class ProductInShopTest {
     Product product = new Product("drink", "Butterbeer", 0, 100);
     Shop shop = new Shop(List.of(product));
     @Test
-    public void whenSellInIs0_thenQualityDegradeTwoTimesMore(){
+    public void whenSellInIs0_thenQualityDegradeTwoTimesMore() throws ExecutionControl.NotImplementedException {
         shop.update(product);
     }
 }
